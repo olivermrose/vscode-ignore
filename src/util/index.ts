@@ -1,8 +1,9 @@
-import path from "node:path";
+import { languages, type TextDocument } from "vscode";
+import { selector } from "../features";
 
 export * from "./getConfig";
 export * from "./promptTemplate";
 
-export function isIgnoreFile(filename: string) {
-	return /^\..+ignore$/.test(path.basename(filename));
+export function isIgnoreFile(document: TextDocument) {
+	return languages.match(selector, document);
 }
