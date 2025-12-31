@@ -98,6 +98,12 @@
 					".vscodeignore",
 					".yarnignore"
 				],
+				"filenamePatterns": [
+					"**/.*ignore",
+					"**/.git/info/exclude",
+					"**/.config/git/ignore"
+				],
+				"firstLine": "^# git ls-files --others --exclude-from=\\.git/info/exclude$",
 				"configuration": "./config.json"
 			}
 		],

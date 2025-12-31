@@ -11,7 +11,7 @@ export enum DiagnosticCode {
 }
 
 export async function update(document: TextDocument): Promise<void> {
-	if (!isIgnoreFile(document.fileName)) return;
+	if (!isIgnoreFile(document)) return;
 
 	const { lint } = getConfig();
 	const file = await parse(document);
