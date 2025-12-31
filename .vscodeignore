@@ -1,7 +1,13 @@
 .vscode/
 src/
 tests/
+
 .gitignore
+.prettierignore
 .prettierrc
+config.json
 tsconfig.json
+tsup.config.ts
+eslint.config.mjs
+pnpm-lock.yaml
 TODO.md

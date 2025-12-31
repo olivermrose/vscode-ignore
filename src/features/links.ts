@@ -17,7 +17,11 @@ export const provideDocumentLinks: DocumentLinkProvider["provideDocumentLinks"] 
 		try {
 			await workspace.fs.readFile(target);
 
-			links.push({ range: pattern.range, target });
+			links.push({
+				range: pattern.range,
+				target,
+				tooltip: target.fsPath,
+			});
 		} catch {
 			continue;
 		}
