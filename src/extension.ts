@@ -2,6 +2,7 @@ import { type ExtensionContext, commands as vscCommands, window, workspace } fro
 import { commands } from "./commands";
 import { diagnostics, providers } from "./features";
 import { getConfig, isIgnoreFile } from "./util";
+import { collection } from "./features/diagnostics";
 
 export async function activate(context: ExtensionContext): Promise<void> {
 	if (window.activeTextEditor) {
@@ -38,11 +39,16 @@ export async function activate(context: ExtensionContext): Promise<void> {
 		await diagnostics.update(event.document);
 	});
 
+	const textDocClose = workspace.onDidCloseTextDocument((document) => {
+		collection.delete(document.uri);
+	});
+
 	context.subscriptions.push(
 		...providers,
 		...commands,
 		diagnostics.collection,
 		textEditorChange,
 		textDocChange,
+		textDocClose,
 	);
 }
