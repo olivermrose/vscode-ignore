@@ -1,5 +1,12 @@
 # Changelog
 
+## 3.1.0
+
+- Add path tooltips
+- Look for ignore files in additional directories
+- Remove diagnostics when document is closed
+- Don't open template on non-ignore files
+
 ## 3.0.0
 
 - Add `.distignore` and `.terraformignore` support
