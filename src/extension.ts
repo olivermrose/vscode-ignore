@@ -1,8 +1,9 @@
-import { type ExtensionContext, commands as vscCommands, window, workspace } from "vscode";
+import { commands as vscCommands, window, workspace } from "vscode";
+import type { ExtensionContext } from "vscode";
 import { commands } from "./commands";
 import { diagnostics, providers } from "./features";
-import { getConfig, isIgnoreFile } from "./util";
 import { collection } from "./features/diagnostics";
+import { getConfig, isIgnoreFile } from "./util";
 
 export async function activate(context: ExtensionContext): Promise<void> {
 	if (window.activeTextEditor) {

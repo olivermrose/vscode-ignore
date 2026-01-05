@@ -1,4 +1,5 @@
-import { type CodeAction, CodeActionKind, type CodeActionProvider, WorkspaceEdit } from "vscode";
+import { CodeActionKind, WorkspaceEdit } from "vscode";
+import type { CodeAction, CodeActionProvider } from "vscode";
 
 export const provideCodeActions: CodeActionProvider["provideCodeActions"] = async (
 	document,

@@ -1,6 +1,9 @@
-import { type Diagnostic, DiagnosticSeverity, languages, type TextDocument } from "vscode";
-import { type IgnoreFile, type IgnorePattern, parse } from "../language/parse";
-import { getConfig, isIgnoreFile, type LintSeverity } from "../util";
+import { DiagnosticSeverity, languages } from "vscode";
+import type { Diagnostic, TextDocument } from "vscode";
+import { parse } from "../language/parse";
+import { getConfig, isIgnoreFile } from "../util";
+import type { IgnoreFile, IgnorePattern } from "../language/parse";
+import type { LintSeverity } from "../util";
 
 export const collection = languages.createDiagnosticCollection("ignore");
 

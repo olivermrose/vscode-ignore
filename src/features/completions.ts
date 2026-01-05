@@ -1,16 +1,8 @@
 import fs from "node:fs";
 import path from "node:path";
 import glob from "fast-glob";
-import {
-	type CompletionItem,
-	type CompletionItemProvider,
-	FileType,
-	CompletionItemKind as Kind,
-	Position,
-	Range,
-	Uri,
-	workspace,
-} from "vscode";
+import { FileType, CompletionItemKind as Kind, Position, Range, Uri, workspace } from "vscode";
+import type { CompletionItem, CompletionItemProvider } from "vscode";
 
 const triggerSuggest = {
 	title: "",

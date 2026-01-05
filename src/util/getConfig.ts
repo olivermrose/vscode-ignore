@@ -1,4 +1,5 @@
-import { workspace, type WorkspaceConfiguration } from "vscode";
+import { workspace } from "vscode";
+import type { WorkspaceConfiguration } from "vscode";
 
 export type LintSeverity = "off" | "warn" | "error";
 

@@ -1,4 +1,5 @@
-import { Position, type Uri, window, workspace, WorkspaceEdit } from "vscode";
+import { Position, window, workspace, WorkspaceEdit } from "vscode";
+import type { Uri } from "vscode";
 import { promptTemplate } from "../util";
 
 export async function chooseTemplate(uri?: Uri): Promise<void> {

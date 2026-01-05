@@ -1,7 +1,8 @@
 import fs from "node:fs/promises";
 import path from "node:path/posix";
 import glob from "fast-glob";
-import { Position, Range, type TextDocument, Uri, workspace } from "vscode";
+import { Position, Range, Uri, workspace } from "vscode";
+import type { TextDocument } from "vscode";
 
 export interface IgnoreFile {
 	name: string;

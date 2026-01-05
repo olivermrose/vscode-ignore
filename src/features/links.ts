@@ -1,5 +1,6 @@
 import path from "node:path/posix";
-import { type DocumentLink, type DocumentLinkProvider, Uri, workspace } from "vscode";
+import { Uri, workspace } from "vscode";
+import type { DocumentLink, DocumentLinkProvider } from "vscode";
 import { parse } from "../language/parse";
 
 export const provideDocumentLinks: DocumentLinkProvider["provideDocumentLinks"] = async (doc) => {

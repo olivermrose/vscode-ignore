@@ -16,7 +16,7 @@
 		"package": "vsce package --no-dependencies",
 		"build": "tsup",
 		"watch": "tsup --watch",
-		"lint": "prettier --write \"src/**\" && eslint \"src/**\" --fix"
+		"lint": "eslint \"src/**\" --fix && prettier --write \"src/**\""
 	},
 	"repository": {
 		"type": "git",

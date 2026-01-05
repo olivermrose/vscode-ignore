@@ -1,4 +1,5 @@
-import fs, { type FileHandle } from "node:fs/promises";
+import fs from "node:fs/promises";
+import type { FileHandle } from "node:fs/promises";
 import path from "node:path";
 import { Uri, window, workspace } from "vscode";
 import { flavors } from "../language/flavors";

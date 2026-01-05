@@ -1,4 +1,5 @@
-import { CodeLens, type CodeLensProvider, Location, Position, Range } from "vscode";
+import { CodeLens, Location, Position, Range } from "vscode";
+import type { CodeLensProvider } from "vscode";
 import { parse } from "../language/parse";
 import { getConfig } from "../util";
 
